@@ -6,7 +6,7 @@ mp_drawing_styles = mp.solutions.drawing_styles
 mp_pose = mp.solutions.pose
 
 # For static images:
-IMAGE_FILES = ['./images/pushup1.jpg']
+IMAGE_FILES = ['./images/good_pushup2.jpg']
 BG_COLOR = (192, 192, 192)  # gray
 with mp_pose.Pose(
         static_image_mode=True,
@@ -69,7 +69,7 @@ with mp_pose.Pose(
             cv2.putText(image, "Perfect Pushup", (int(0), int(50)),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
             print("Perfect Pushup")
-        elif abs(angle) < 20:
+        elif abs(angle) < 15:
             cv2.putText(image, "Good Pushup", (int(0), int(50)),
                         cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
             print("Good Pushup")
